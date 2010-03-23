@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<description>
+<statement id="s1">
+<structure name="involucres" id ="o1"/>
+<structure name="calyculi"  id="o2"/>
+<relation id="r1" from="o1" to="o2" name="sometimes subtended by " negation="no"/>
+<text> involucres sometimes subtended by calyculi;</text>
+</statement>
+
+<statement id="s2">
+    <structure name="branches" id ="o3">
+        <character name="arrangement" value="cluster"/>
+    </structure>
+   <structure name="leaves"  id="o4">
+        <character name="shape" value="bractlike"/>
+    </structure>
+    <relation id="r2" from="o3" to="o4" name="subtended by "  negation="no"/>
+    <text>a cluster of branches subtended by bractlike leaves .</text>
+</statement>
+
+<statement id="s3">
+<structure name="roots" id ="o5">
+ <character name="type" value="taproots" frequency_modifier="usually"/>
+ <character name="texture" value="fibrous" frequency_modifier="sometimes"/>
+ <text>Roots usually taproots , sometimes fibrous.</text>
+</structure>
+</statement>
+
+<statement id="s4">
+    <structure name="heads" id="o6"/>
+    <structure name="leaves" id="o7">
+        <character name="arrangement" value="clusters"/>
+        <character name="size" value="reduced"/>
+    </structure>
+    <relation id="r3" from="o6" to="o7" name="subtended by" geographic_modifier="closely" negation="no"/>
+	<text>Heads closely subtended by clusters of reduced leaves</text>
+</statement>
+
+<statement id="s5">
+    <structure name="pappi" id="o8"/>
+    <structure name="bristles" id="o9">
+        <character name="color" value="white" color_modifier="dull"/>
+        <character name="atypical_color" value="tawny"/>
+        <character name="shape" value="barbed" quality_modifier="finely"/>
+        <character name="count" char_type="range_value" from="60" to="80"/>
+        <character name="atypical_count" from="80" from_inclusive="no"/>
+    </structure>
+    <relation id="r4" from="o8" to="o9" name="consist of" negation="no"/>
+    <text>pappi of 60–80+ dull white [tawny] , finely barbed bristles . </text>
+</statement>
+
+<statement id="s6">
+    <structure name="Phyllaries" id="o10" >
+        <character name="count" type="range_value" from="65" to="85"/>
+    </structure>
+    <structure name="Phyllaries" id="o11" >
+         <character name="count" type="range_value" from="25" to="35"/>
+        <character name="shape" value="reflexed"/>
+    </structure>
+    <relation id="r5" from="o10" to="o11" name="expresses constraint on" negation="no"/>
+    <text>Phyllaries 65-85 , 25-35 of them reflexed;</text>
+</statement>
+
+<statement id="s7">
+    <structure name="phyllaries" id="o12">
+        <character type="range_value" name="count" from="18" to="70" upper_restricted="no"/>
+        <character name="texture" value="chartaceous" degree_modifier="more or less"/>
+    </structure>
+    <structure name="series" id="o13">
+        <character type="range_value" name="count" from="4" to="7" upper_restricted="no"/>
+    </structure>
+    <relation id="r6" from="o12" to="o13" name="arranged in" negation="no"/>
+
+    <structure name="phyllaries" id="o14" constraint="outer">
+        <character name="shape" value="ovate|lanceolate|subulate"/>
+    </structure>
+
+    <structure name="phyllaries" id="o15" constraint="inner">
+        <character name="shape" value="lanceolate|oblong"/>
+    </structure>
+    <text>Phyllaries 18-70+ in 4-7+ series , the outer ovate to lanceolate or subulate , inner ± lanceolate to oblong, all ± chartaceous</text>
+</statement>
+
+
+<statement id="s8">
+<structure name="leaves" id="o16">
+<character char_type="range_value" name="shape" from="ovate" to="lanceolate"/>
+<character name="shape" value="ovate"/>
+<character name="shape" value="lanceolate"/>
+<character name="shape" value="subulate"/>
+<character name="shape" value="round"/>
+</structure>
+<text>leaves ovate to lanceolate or subulate or round.</text>
+</statement>
+
+<statement id="s9">
+<structure name="stamens" id="o17">
+  <character type="range_value" name="atypical_count" from="2" to="3" to_inclusive="false"/>
+    <character type="range_value" name="atypical_count" from="7" to="20" from_inclusive="false"/>
+  <character type="range_value" name="count" from="3" to="7"/>  
+</structure>
+<text>stamens [2--]3-7[--20].continuous</text>
+</statement>
+
+
+<statement id="s10">
+<structure name="stamens" id="o18">
+  <character type="range_value" name="atypical_count" from="20"/>
+  <character name="atypical_count" value="1"/>
+  <character type="range_value" name="count" from="3" to="7"/>     
+</structure>
+<text>stamens [1]3-7[20+].mixed discrete and continuous</text>
+</statement>
+
+
+<statement id="s11">
+<structure name="blades" id="o19">
+  <character char_type="range_value" name="shape" from="elliptic" to="spatulate"/>
+  <character name="shape" value="oblong"/>
+  <character name="shape" value="elliptic"/>
+  <character name="shape" value="spatulate"/>
+  <character char_type="range_value" name="length" from="11" to="25" unit="cm"/>    
+  <character char_type="range_value" name="width" from="60" to="75" unit="mm"/>
+  <character char_type="range_value" name="atypical_width" from="75" from_inclusive="false"/>
+  <character char_type="range_value" name="l_w_ratio" from="2" to="4"/>     
+</structure>
+<text>blades oblong or elliptic to spatulate , 11-25 cm × 60-75+ mm , l/w = 2-4.</text>
+</statement>
+
+
+<statement id="s12">
+<structure name="phyllaries" id="o20" constraint="outer">
+<character name="shape" value="appressed"/>
+</structure>
+<structure name="phyllaries" id="o21" constraint="middle">
+<character name="shape" value="appressed"/>
+</structure>
+<structure name="apecies" id="o22">
+<character name="orientation" value="spreading"/>
+</structure>
+<text>outer and middle [phyllaries] appressed, apecies spreading</text>
+</statement>
+
+</description>
