@@ -60,6 +60,7 @@
       <xs:attribute name="unit" type="xs:string"/>
       <xs:attribute name="upper_restricted" type="xs:boolean"/>
       <xs:attribute name="value" type="xs:string"/>
+      <xs:attribute name="negation" type="xs:boolean"/>
       <xs:attribute name="constraint" type="xs:string"/>
       <xs:attribute name="constraintid" type="xs:IDREFS"/>
     </xs:complexType>
