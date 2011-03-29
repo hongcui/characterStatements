@@ -15,7 +15,7 @@
   <xs:element name="statement">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="1" ref="text"/>
+        <xs:element minOccurs="1" maxOccurs="1" ref="text"/>
         <xs:choice maxOccurs="unbounded" minOccurs="0">
           <xs:element ref="relation"/>
           <xs:element ref="structure"/>
