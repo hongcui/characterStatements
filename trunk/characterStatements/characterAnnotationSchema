@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- $Id$ --!>
+<!-- $Id$ -->
+<!--changes: -->
+<!--add id for character-->
+<!--add symmetric attribute for relation-->
+<!--make text element the first child of a statement element-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
   <xs:element name="description">
     <xs:complexType>
@@ -11,11 +15,11 @@
   <xs:element name="statement">
     <xs:complexType>
       <xs:sequence>
+        <xs:element minOccurs="1" ref="text"/>
         <xs:choice maxOccurs="unbounded" minOccurs="0">
           <xs:element ref="relation"/>
           <xs:element ref="structure"/>
         </xs:choice>
-        <xs:element minOccurs="1" ref="text"/>
       </xs:sequence>
       <xs:attribute name="id" use="required" type="xs:string"/>
     </xs:complexType>
@@ -30,6 +34,7 @@
       <xs:attribute name="to" use="required" type="xs:IDREFS"/>
       <xs:attribute name="value" type="xs:string"/>
       <xs:attribute name="constraint" type="xs:string"/>
+      <xs:attribute name="symmetric" type="xs:boolean"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="structure">
@@ -64,6 +69,7 @@
       <xs:attribute name="negation" type="xs:boolean"/>
       <xs:attribute name="constraint" type="xs:string"/>
       <xs:attribute name="constraintid" type="xs:IDREFS"/>
+      <xs:attribute name="id" type="xs:ID"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="text" type="xs:string"/>
