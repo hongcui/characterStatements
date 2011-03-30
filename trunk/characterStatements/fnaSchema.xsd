@@ -33,7 +33,22 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="discussion"/>
-    <xs:element name="key"/>
+    <xs:element name="key">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="couplet">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id"/>
+                            <xs:element name="statement"/>
+                            <xs:element name="branch_id"/>
+                            <xs:element name="determination"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="treatment">
         <xs:complexType>
             <xs:sequence>
@@ -44,6 +59,13 @@
                 <xs:element ref="distribution"/>
                 <xs:element ref="discussion"/>
                 <xs:element ref="key"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="references">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="reference"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
