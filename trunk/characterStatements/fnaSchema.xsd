@@ -55,10 +55,13 @@
                 <xs:element ref="meta"/>
                 <xs:element ref="nomenclature"/>
                 <xs:element ref="author"/>
-                <xs:element ref="description"/>
-                <xs:element ref="distribution"/>
-                <xs:element ref="discussion"/>
-                <xs:element ref="key"/>
+                <xs:element ref="description" minOccurs="0"/>
+                <xs:element ref="distribution" minOccurs="0"/>
+                <xs:element ref="discussion" minOccurs="0"/>
+                <xs:element ref="key" minOccurs="0"/>
+                <xs:element minOccurs="0" ref="references"/>
+                <xs:element minOccurs="0" ref="illustration"/>
+                <xs:element minOccurs="0" ref="map"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -66,6 +69,22 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="reference"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="illustration">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:ID"/>
+                <xs:element name="URI"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="map">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:ID"/>
+                <xs:element name="URI"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
