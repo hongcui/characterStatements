@@ -35,6 +35,7 @@
       <xs:attribute name="value" type="xs:string"/>
       <xs:attribute name="constraint" type="xs:string"/>
       <xs:attribute name="symmetric" type="xs:boolean"/>
+      <xs:attribute name="inference_method"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="structure">
